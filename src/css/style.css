@@ -7,3 +7,11 @@
 body {
   font-family: sans-serif;
 }
+
+.book {
+  transition: 0.3s ease all;
+}
+
+.book:hover {
+  transform: scale(1.01);
+}

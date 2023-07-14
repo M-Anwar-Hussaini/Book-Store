@@ -1,7 +1,14 @@
+import Header from './components/Header';
+import BookList from './components/BookList';
+import AddBookForm from './components/AddBook';
 
 function App() {
   return (
-    <h1>Hellor React</h1>
+    <>
+      <Header />
+      <BookList />
+      <AddBookForm />
+    </>
   );
 }
 
