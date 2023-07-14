@@ -73,7 +73,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- ✅ [Click] to see live demo.
+- ✅ Coming soon...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
