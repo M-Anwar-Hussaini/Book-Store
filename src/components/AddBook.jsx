@@ -13,7 +13,9 @@ function AddBookForm() {
             </select>
           </div>
           <div className="col-2">
-            <button className="btn btn-primary w-100">Add Book</button>
+            <button type="button" className="btn btn-primary w-100">
+              Add Book
+            </button>
           </div>
         </div>
       </form>

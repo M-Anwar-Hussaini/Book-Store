@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+
 function Header() {
   return (
     <header className="p-4 bg-light">
@@ -19,7 +20,9 @@ function Header() {
           </li>
         </ul>
 
-        <Link className="nav-link">ICON</Link>
+        <Link className="nav-link" to="/">
+          ICON
+        </Link>
       </nav>
     </header>
   );

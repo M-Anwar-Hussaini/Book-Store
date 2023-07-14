@@ -9,9 +9,9 @@ function BookList() {
   return (
     <div className="p-4 border border-success rounded mt-3">
       <h1 className="fw-bold">Book List</h1>
-      {bookList.map((el) => {
-        return <Book author={el.author} genre={el.genre} title={el.title} key={el.title} />;
-      })}
+      {bookList.map((el) => (
+        <Book author={el.author} genre={el.genre} title={el.title} key={el.title} />
+      ))}
     </div>
   );
 }
