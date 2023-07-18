@@ -1,23 +1,35 @@
 import PropTypes from 'prop-types';
 
-function Book({ genre, title, author }) {
+function Book({
+  category, title, author, onDelete,
+}) {
   return (
     <div className="book p-4 rounded border my-3 shadow font-monospace">
       <div className="row align-items-center justify-content-center ">
         <div className="col">
           <div className="row align-items-center">
             <div className="col">
-              <span className="text-muted fw-bold">{genre}</span>
+              <span className="text-muted fw-bold">{category}</span>
               <h3 className=" fw-bold fs-2 mb-0">{title}</h3>
               <p className="opacity-50 text-primary">{author}</p>
               <div className="list-group list-group-horizontal">
-                <button type="button" className="list-group-item btn btn-sm btn-outline-primary">
+                <button
+                  type="button"
+                  className="list-group-item btn btn-sm btn-outline-primary"
+                >
                   Comment
                 </button>
-                <button type="button" className="list-group-item btn btn-sm btn-danger">
+                <button
+                  type="button"
+                  className="list-group-item btn btn-sm btn-danger"
+                  onClick={onDelete}
+                >
                   Remove
                 </button>
-                <button type="button" className="list-group-item btn btn-sm btn-outline-warning">
+                <button
+                  type="button"
+                  className="list-group-item btn btn-sm btn-outline-warning"
+                >
                   Edit
                 </button>
               </div>
@@ -45,9 +57,10 @@ function Book({ genre, title, author }) {
 }
 
 Book.propTypes = {
-  genre: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  onDelete: PropTypes.func.isRequired,
 };
 
 export default Book;
