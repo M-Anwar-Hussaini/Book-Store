@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 
-function Book({ category, title, author }) {
+function Book({
+  category, title, author, onDelete,
+}) {
   return (
     <div className="book p-4 rounded border my-3 shadow font-monospace">
       <div className="row align-items-center justify-content-center ">
@@ -20,6 +22,7 @@ function Book({ category, title, author }) {
                 <button
                   type="button"
                   className="list-group-item btn btn-sm btn-danger"
+                  onClick={onDelete}
                 >
                   Remove
                 </button>
@@ -57,6 +60,7 @@ Book.propTypes = {
   category: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  onDelete: PropTypes.func.isRequired,
 };
 
 export default Book;
