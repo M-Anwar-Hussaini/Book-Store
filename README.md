@@ -73,7 +73,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- ✅ Coming soon...
+- ✅ Click [here](https://book-store-pepn.onrender.com/) to see the live demo.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
