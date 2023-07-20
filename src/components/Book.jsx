@@ -1,8 +1,11 @@
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../api/utilities';
 
 function Book({
-  category, title, author, onDelete,
+  id, category, title, author,
 }) {
+  const dispatch = useDispatch();
   return (
     <div className="book p-4 rounded border my-3 shadow font-monospace">
       <div className="row align-items-center justify-content-center ">
@@ -22,7 +25,7 @@ function Book({
                 <button
                   type="button"
                   className="list-group-item btn btn-sm btn-danger"
-                  onClick={onDelete}
+                  onClick={() => dispatch(removeBook(id))}
                 >
                   Remove
                 </button>
@@ -60,7 +63,7 @@ Book.propTypes = {
   category: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  onDelete: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default Book;
